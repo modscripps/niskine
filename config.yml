@@ -13,3 +13,4 @@ data:
     mb: $data/proc/mb/merged_100_-28_-21_56_61.nc
 
   ssh: $data/ssh/
+  wind: $data/wind/
