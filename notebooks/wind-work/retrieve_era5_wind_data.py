@@ -55,10 +55,10 @@ conf = niskine.io.load_config()
 # Data are saved to a `.grib` file that can be read with `xarray`.
 
 # %%
-gribfile = conf.data.wind.joinpath('era5_uv_10m_new.grib').as_posix()
+gribfile = conf.data.wind.dir.joinpath('era5_uv_10m_new.grib').as_posix()
 
 # %%
-ncfile = conf.data.wind.joinpath('era5_uv_10m.nc').as_posix()
+ncfile = conf.data.wind.era5.as_posix()
 
 # %%
 c = cdsapi.Client()
@@ -119,7 +119,7 @@ era5uvwind.to_netcdf(ncfile)
 # Read data in netcdf format and have a quick look by contrasting variance in January and June.
 
 # %%
-era5uvwind = xr.open_dataset('data/era5_uv_10m_new.nc')
+era5uvwind = xr.open_dataset(conf.data.wind.era5)
 
 # %%
 plot_options = dict(vmin=20, vmax=50)
