@@ -12,6 +12,9 @@ data:
     adcp: $data/proc/adcp/
     mb: $data/proc/mb/merged_100_-28_-21_56_61.nc
 
+  gridded:
+    adcp: $data/gridded/adcp/
+
   ssh: $data/ssh/
   wind:
     dir: $data/wind/
