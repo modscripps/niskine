@@ -16,3 +16,5 @@ data:
   wind:
     dir: $data/wind/
     era5: $data/wind/era5_uv_10m.nc 
+
+mooring_locations: $data/niskine_mooring_locations.nc
